@@ -7,6 +7,7 @@
 WiFiUDP Udp;                                // A UDP instance to let us send and receive packets over UDP
 const unsigned int outPort = 9999;          // remote port to receive OSC
 const unsigned int localPort = 8888;        // local port to listen for OSC packets (actually not used for sending)
+const int lampaPin = 4;
 
 void setup() {
   Serial.begin(115200);
@@ -37,6 +38,9 @@ void setup() {
 #endif
 
   delay(500);
+
+  pinMode(lampaPin, OUTPUT);
+  digitalWrite(lampaPin, LOW);
 }
 
 
@@ -48,4 +52,7 @@ void loop() {
   Udp.endPacket();
   msg.empty();
   delay(500);
+  digitalWrite(lampaPin, HIGH);
+  delay(500);
+  digitalWrite(lampaPin, LOW);
 }
