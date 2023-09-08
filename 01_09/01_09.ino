@@ -11,7 +11,7 @@ WiFiUDP Udp;                                // A UDP instance to let us send and
 OSCErrorCode error;
 const unsigned int outPort = 9901;          // remote port to receive OSC
 const unsigned int localPort = 8801;        // local port to listen for OSC packets (actually not used for sending)
-const int lampaPin = 4;
+const int lampaPin = 2;   // D0
 
 float balansor = 0.0;
 unsigned int lampaState = LOW;
@@ -57,9 +57,9 @@ void bal(OSCMessage &msg) {
 }
 
 void lampa(OSCMessage &msg) {
-  lampaState = msg.getInt(0);
+  lampaState = !msg.getInt(0);
   digitalWrite(lampaPin, lampaState);
-  Serial.print("Lampa 09: "); Serial.println(lampaState);
+  Serial.print("Lampa 09 (inversat): "); Serial.println(lampaState);
 }
 
 void loop() {
@@ -81,8 +81,8 @@ void loop() {
   }
 
   // test
-  delay(500);
-  digitalWrite(lampaPin, HIGH);
-  delay(500);
-  digitalWrite(lampaPin, LOW);
+//  delay(500);
+//  digitalWrite(lampaPin, HIGH);
+//  delay(500);
+//  digitalWrite(lampaPin, LOW);
 }
