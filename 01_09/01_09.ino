@@ -47,7 +47,7 @@ void setup() {
   delay(500);
 
   pinMode(lampaPin, OUTPUT);
-  digitalWrite(lampaPin, LOW);
+  digitalWrite(lampaPin, HIGH);
 }
 
 void bal(OSCMessage &msg) {
@@ -79,10 +79,4 @@ void loop() {
       Serial.println(error);
     }
   }
-
-  // test
-//  delay(500);
-//  digitalWrite(lampaPin, HIGH);
-//  delay(500);
-//  digitalWrite(lampaPin, LOW);
 }
