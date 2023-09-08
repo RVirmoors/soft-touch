@@ -11,7 +11,7 @@ WiFiUDP Udp;                                // A UDP instance to let us send and
 OSCErrorCode error;
 const unsigned int outPort = 9901;          // remote port to receive OSC
 const unsigned int localPort = 8801;        // local port to listen for OSC packets (actually not used for sending)
-const int lampaPin = 2;   // D0
+const int lampaPin = 2;   // D4
 
 float balansor = 0.0;
 unsigned int lampaState = LOW;
