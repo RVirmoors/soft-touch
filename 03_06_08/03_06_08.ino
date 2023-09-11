@@ -82,8 +82,9 @@ void relays(OSCMessage &msg) {
 }
 
 void loop() {
-  // get data
   OSCBundle bundle;
+  
+  // get data
   int size = Udp.parsePacket();
 
   if (size > 0) {
