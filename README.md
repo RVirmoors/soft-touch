@@ -2,6 +2,10 @@
 
 ![node-mcu-pinout](nodemcu-pinout.png)
 
+![node-mcu-pins](nodemcu-pinlist.png)
+
+https://randomnerdtutorials.com/esp8266-pinout-reference-gpios/
+
 avoid using D3 & D8 [(GPIO 0 & 15)](https://stackoverflow.com/questions/41352796/warning-espcomm-sync-failed-error-espcomm-open-failed-error-espcomm-upload-me) else you'll get errors when uploading the sketch
 
 OSC ports:
