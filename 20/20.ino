@@ -13,7 +13,7 @@ OSCErrorCode error;
 const unsigned int outPort = 9920;          // remote port to send OSC to Max
 const unsigned int localPort = 8820;        // local port to listen for OSC packets
 
-const int vib1 = 2;     // D4
+const int vib1 = 4;     // D2
 const int vib2 = 14;    // D5
 const int vib3 = 12;    // D6
 const int vib4 = 13;    // D7
