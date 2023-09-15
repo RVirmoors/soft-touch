@@ -34,11 +34,11 @@ void setup() {
   Serial.begin(115200);
   delay(10);
 
-//  if (!cap.begin(0x5A)) {
-//    Serial.println("MPR121 not found, check wiring?");
-//    while (1);
-//  }
-//  Serial.println("MPR121 found!");
+  if (!cap.begin(0x5A)) {
+    Serial.println("MPR121 not found, check wiring?");
+    while (1);
+  }
+  Serial.println("MPR121 found!");
   
   Serial.println();
   Serial.print("Connecting to ");
@@ -101,16 +101,16 @@ void loop() {
   }
 
   // send data
-//  Serial.println(cap.touched(), HEX);
-//  Serial.print(cap.filteredData(0)); Serial.print("\t");
-//  Serial.print(cap.baselineData(0)); Serial.print("\t");
-//  Serial.println();
+  Serial.println(cap.touched(), HEX);
+  Serial.print(cap.filteredData(0)); Serial.print("\t");
+  Serial.print(cap.baselineData(0)); Serial.print("\t");
+  Serial.println();
 
   touch = cap.filteredData(0);
   micState = digitalRead(microscopPin);
   carState = digitalRead(cartePin);
 
-//  Serial.print("Sending MPR: "); Serial.println(touch);
+  Serial.print("Sending MPR: "); Serial.println(touch);
 
   bundle.empty();
   bundle.add("/03").add(touch);

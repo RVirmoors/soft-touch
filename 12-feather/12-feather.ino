@@ -1,4 +1,4 @@
-// OSC out: 17 - IMU ghem
+// OSC out: 12 - IMU ghem
 
 #include "WiFiConfig.h"
 #include <ESP8266WiFi.h>
@@ -15,8 +15,8 @@
 
 WiFiUDP Udp;                                // A UDP instance to let us send and receive packets over UDP
 OSCErrorCode error;
-const unsigned int outPort = 9917;          // remote port to receive OSC
-const unsigned int localPort = 8817;        // local port to listen for OSC packets
+const unsigned int outPort = 9912;          // remote port to receive OSC
+const unsigned int localPort = 8812;        // local port to listen for OSC packets
 
 void setup() {
   Serial.begin(115200);
@@ -24,6 +24,7 @@ void setup() {
 
   // I2C stuff
   Wire.begin();
+  Serial.begin(9600);
   Wire.beginTransmission(Addr);
   Wire.write(0x2A); // Select control register
   Wire.write(0x00); // StandBy mode
@@ -109,7 +110,7 @@ void loop() {
   Serial.print(xAccl); Serial.print(yAccl); Serial.println(zAccl);
 
   bundle.empty();
-  bundle.add("/17").add(xAccl).add(yAccl).add(zAccl);
+  bundle.add("/12").add(xAccl).add(yAccl).add(zAccl);
   
   Udp.beginPacket(host_ip, outPort);
   bundle.send(Udp);
