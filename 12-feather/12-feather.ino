@@ -1,8 +1,8 @@
 // OSC out: 12 - IMU ghem
 
 #include "WiFiConfig.h"
-#include <ESP8266WiFi.h>
-#include <ESP8266WiFiMulti.h>
+#include "ESP8266WiFi.h"
+#include "ESP8266WiFiMulti.h"
 #include <WiFiUdp.h>
 #include <OSCMessage.h>
 #include <OSCBundle.h>
@@ -12,6 +12,9 @@
 
 // MMA8452Q I2C address is 0x1C(28)
 #define Addr 0x1C
+
+
+ESP8266WiFiMulti WiFiMulti;
 
 WiFiUDP Udp;                                // A UDP instance to let us send and receive packets over UDP
 OSCErrorCode error;
@@ -24,7 +27,6 @@ void setup() {
 
   // I2C stuff
   Wire.begin();
-  Serial.begin(9600);
   Wire.beginTransmission(Addr);
   Wire.write(0x2A); // Select control register
   Wire.write(0x00); // StandBy mode
@@ -42,9 +44,10 @@ void setup() {
   Serial.println();
   Serial.print("Connecting to ");
   Serial.println(SSID_name);
-  WiFi.begin(SSID_name, passw);
+  WiFi.mode(WIFI_STA);
+  WiFiMulti.addAP(SSID_name, passw);
 
-  while (WiFi.status() != WL_CONNECTED) {
+  while (WiFiMulti.run() != WL_CONNECTED) {
       delay(500);
       Serial.print(".");
   }

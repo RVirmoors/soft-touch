@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 156.0, 531.0, 551.0, 437.0 ],
+		"rect" : [ 1025.0, 294.0, 551.0, 437.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -111,11 +111,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-14",
+					"linecount" : 4,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 284.0, 192.0, 39.0, 22.0 ]
+					"patching_rect" : [ 284.0, 192.0, 39.0, 64.0 ],
+					"text" : "/12 -419 683 -644"
 				}
 
 			}
@@ -127,7 +129,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 284.0, 132.0, 97.0, 22.0 ],
-					"text" : "udpreceive 9903"
+					"text" : "udpreceive 9912"
 				}
 
 			}

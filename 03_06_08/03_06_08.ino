@@ -16,11 +16,11 @@ OSCErrorCode error;
 const unsigned int outPort = 9903;          // remote port to receive OSC
 const unsigned int localPort = 8803;        // local port to listen for OSC packets
 
-Adafruit_MPR121 cap = Adafruit_MPR121();
-const int ventilatorPin = 2;  // D4
-const int mixerPin = 4;       // D2
-const int bormasinaPin = 5;   // D1
-const int microscopPin = 15;  // D8
+Adafruit_MPR121 cap = Adafruit_MPR121(); // D1 & D2
+const int ventilatorPin = 0;  // D3
+const int mixerPin = 2;       // D4
+const int bormasinaPin = 14;   // D5
+const int microscopPin = 12;  // D6
 const int cartePin = 13;      // D7
 
 float touch = 0.0;
