@@ -1,4 +1,4 @@
-// OSC out: 20 - vibratie din 4 colturi (borcan lut)
+// OSC out: 20 - 10 magnetometri (senzori Hall)
 
 #include "WiFiConfig.h"
 #include <ESP8266WiFi.h>
@@ -13,15 +13,27 @@ OSCErrorCode error;
 const unsigned int outPort = 9920;          // remote port to send OSC to Max
 const unsigned int localPort = 8820;        // local port to listen for OSC packets
 
-const int vib1 = 4;     // D2
-const int vib2 = 14;    // D5
-const int vib3 = 12;    // D6
-const int vib4 = 13;    // D7
+const int mag1 = 0;     
+const int mag2 = 2;    
+const int mag3 = 4;    
+const int mag4 = 6;    
+const int mag5 = 8;
+const int mag1a = 1;     
+const int mag2a = 3;    
+const int mag3a = 5;    
+const int mag4a = 7;    
+const int mag5a = 9;
 
-unsigned int vib1state = LOW;
-unsigned int vib2state = LOW;
-unsigned int vib3state = LOW;
-unsigned int vib4state = LOW;
+unsigned int mag1state = LOW;
+unsigned int mag2state = LOW;
+unsigned int mag3state = LOW;
+unsigned int mag4state = LOW;
+unsigned int mag5state = LOW;
+unsigned int mag1astate = LOW;
+unsigned int mag2astate = LOW;
+unsigned int mag3astate = LOW;
+unsigned int mag4astate = LOW;
+unsigned int mag5astate = LOW;
 
 void setup() {
   Serial.begin(115200);
@@ -53,21 +65,33 @@ void setup() {
 
   delay(500);
   
-  pinMode(vib1, INPUT);pinMode(vib2, INPUT);pinMode(vib3, INPUT);pinMode(vib4, INPUT);
+  pinMode(mag1, INPUT);pinMode(mag2, INPUT);pinMode(mag3, INPUT);pinMode(mag4, INPUT);pinMode(mag5, INPUT);
+  pinMode(mag1a, INPUT);pinMode(mag2a, INPUT);pinMode(mag3a, INPUT);pinMode(mag4a, INPUT);pinMode(mag5a, INPUT);
 }
 
 void loop() {
   OSCBundle bundle;
   
   // send data
-  vib1state = digitalRead(vib1);
-  vib2state = digitalRead(vib2);
-  vib3state = digitalRead(vib3);
-  vib4state = digitalRead(vib4);
-  Serial.print(vib1state);Serial.print(vib2state);Serial.print(vib3state);Serial.println(vib4state);
-
+  mag1state = digitalRead(mag1);
+  mag2state = digitalRead(mag2);
+  mag3state = digitalRead(mag3);
+  mag4state = digitalRead(mag4);
+  mag5state = digitalRead(mag5);
+  mag1astate = digitalRead(mag1a);
+  mag2astate = digitalRead(mag2a);
+  mag3astate = digitalRead(mag3a);
+  mag4astate = digitalRead(mag4a);
+  mag5astate = digitalRead(mag5a);
+  Serial.print(mag1state);Serial.print(mag1astate);Serial.print("-");
+  Serial.print(mag2state);Serial.print(mag2astate);Serial.print("-");
+  Serial.print(mag3state);Serial.print(mag3astate);Serial.print("-");
+  Serial.print(mag4state);Serial.print(mag4astate);Serial.print("-");
+  Serial.print(mag5state);Serial.println(mag5astate);
+  
   bundle.empty();
-  bundle.add("/20").add(vib1state).add(vib2state).add(vib3state).add(vib4state);
+  bundle.add("/20").add(mag1state).add(mag2state).add(mag3state).add(mag4state);add(mag5state);
+  bundle.add(mag1astate).add(mag2astate).add(mag3astate).add(mag4astate);add(mag5astate);
   Udp.beginPacket(host_ip, outPort);
   bundle.send(Udp);
   Udp.endPacket();
