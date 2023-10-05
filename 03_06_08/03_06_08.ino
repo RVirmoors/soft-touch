@@ -1,4 +1,4 @@
-// OSC out: 03 - atingere bormasina MPR121, 06 - fotorezistor microscop, 08 - fotorezistor carte
+// OSC out: 03 - atingere bormasina MPR121, 06 - distanta microscop, 08 - fotorezistor carte
 // OSC in: relee on/off ventilator, mixer, bormasina
 
 #include "WiFiConfig.h"
@@ -20,14 +20,17 @@ Adafruit_MPR121 cap = Adafruit_MPR121(); // D1 & D2
 const int ventilatorPin = 0;  // D3
 const int mixerPin = 2;       // D4
 const int bormasinaPin = 14;   // D5
-const int microscopPin = 12;  // D6
-const int cartePin = 13;      // D7
+const int cartePin = 12;  // D6
+const int TRIG_PIN = 15;       // D8
+const int ECHO_PIN = 13;       // D7
+
+long duration;
+int distance;
 
 float touch = 0.0;
 unsigned int venState = LOW;
 unsigned int mixState = LOW;
 unsigned int borState = LOW;
-unsigned int micState = LOW;
 unsigned int carState = LOW;
 
 void setup() {
@@ -68,7 +71,9 @@ void setup() {
 
   pinMode(ventilatorPin, OUTPUT);pinMode(mixerPin, OUTPUT);pinMode(bormasinaPin, OUTPUT);
   digitalWrite(ventilatorPin, HIGH);digitalWrite(mixerPin, HIGH);digitalWrite(bormasinaPin, HIGH);
-  pinMode(microscopPin, INPUT);pinMode(cartePin, INPUT);
+  pinMode(cartePin, INPUT);
+  pinMode(TRIG_PIN, OUTPUT);
+  pinMode(ECHO_PIN, INPUT);
 }
 
 void relays(OSCMessage &msg) {
@@ -101,20 +106,29 @@ void loop() {
   }
 
   // send data
-  Serial.println(cap.touched(), HEX);
-  Serial.print(cap.filteredData(0)); Serial.print("\t");
-  Serial.print(cap.baselineData(0)); Serial.print("\t");
-  Serial.println();
+//  Serial.println(cap.touched(), HEX);
+//  Serial.print(cap.filteredData(0)); Serial.print("\t");
+//  Serial.print(cap.baselineData(0)); Serial.print("\t");
+//  Serial.println();
 
-  touch = cap.filteredData(0);
-  micState = digitalRead(microscopPin);
+  digitalWrite(TRIG_PIN, LOW);
+  delayMicroseconds(2);
+  digitalWrite(TRIG_PIN, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(TRIG_PIN, LOW);
+  duration = pulseIn(ECHO_PIN, HIGH);
+  distance = duration * 0.017;
+
+  touch = cap.baselineData(0) - cap.filteredData(0);
   carState = digitalRead(cartePin);
 
   Serial.print("Sending MPR: "); Serial.println(touch);
+  Serial.print("Dist: "); Serial.println(distance);
+  Serial.print("Carte: "); Serial.println(carState);
 
   bundle.empty();
   bundle.add("/03").add(touch);
-  bundle.add("/06").add(micState);
+  bundle.add("/06").add(distance);
   bundle.add("/08").add(carState);
   
   Udp.beginPacket(host_ip, outPort);

@@ -1,3 +1,4 @@
+// OSC in: releu bec UV
 // OSC out: 05 - distanta WC
 
 #include "WiFiConfig.h"
@@ -15,9 +16,11 @@ const unsigned int localPort = 8805;        // local port to listen for OSC pack
 
 const int TRIG_PIN = 15;       // D8
 const int ECHO_PIN = 13;       // D7
+const int releuPin = 14;       // D5
 
 long duration;
 int distance;
+unsigned int relState = LOW;
 
 void setup() {
   Serial.begin(115200);
@@ -51,10 +54,33 @@ void setup() {
   
   pinMode(TRIG_PIN, OUTPUT);
   pinMode(ECHO_PIN, INPUT);
+  pinMode(releuPin, OUTPUT); digitalWrite(releuPin, HIGH);
+}
+
+void relays(OSCMessage &msg) {
+  relState = !msg.getInt(0); 
+  digitalWrite(releuPin, relState);
+  Serial.print("releu UV: "); Serial.println(relState);
 }
 
 void loop() {
   OSCBundle bundle;
+  
+  // get data
+  int size = Udp.parsePacket();
+
+  if (size > 0) {
+    while (size--) {
+      bundle.fill(Udp.read());
+    }
+    if (!bundle.hasError()) {
+      bundle.dispatch("/05", relays);
+    } else {
+      error = bundle.getError();
+      Serial.print("error: ");
+      Serial.println(error);
+    }
+  }
   
   // send data
   digitalWrite(TRIG_PIN, LOW);
@@ -64,7 +90,7 @@ void loop() {
   digitalWrite(TRIG_PIN, LOW);
   duration = pulseIn(ECHO_PIN, HIGH);
   distance = duration * 0.017;
-  Serial.println(distance);
+  // Serial.println(distance);
 
   bundle.empty();
   bundle.add("/05").add(distance);
