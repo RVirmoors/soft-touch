@@ -1,4 +1,4 @@
-// OSC out: 11 - vibratie carpeta
+// OSC out: 11 - vibratie carpeta 1
 
 #include "WiFiConfig.h"
 #include <ESP8266WiFi.h>

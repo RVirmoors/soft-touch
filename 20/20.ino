@@ -13,16 +13,16 @@ OSCErrorCode error;
 const unsigned int outPort = 9920;          // remote port to send OSC to Max
 const unsigned int localPort = 8820;        // local port to listen for OSC packets
 
-const int mag1 = 0;     
-const int mag2 = 2;    
-const int mag3 = 4;    
-const int mag4 = 6;    
-const int mag5 = 8;
-const int mag1a = 1;     
-const int mag2a = 3;    
-const int mag3a = 5;    
-const int mag4a = 7;    
-const int mag5a = 9;
+const int mag1 = 2;     
+const int mag2 = 4;    
+const int mag3 = 6;    
+const int mag4 = 8;    
+const int mag5 = 10;
+const int mag1a = 3;     
+const int mag2a = 5;    
+const int mag3a = 7;    
+const int mag4a = 9;    
+const int mag5a = 11;
 
 unsigned int mag1state = LOW;
 unsigned int mag2state = LOW;

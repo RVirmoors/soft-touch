@@ -1,4 +1,4 @@
-// OSC out: 04 - distanta WC
+// OSC out: 04 - distanta WC, 19 - vibratie carpeta 2
 
 #include "WiFiConfig.h"
 #include <ESP8266WiFi.h>
@@ -15,6 +15,10 @@ const unsigned int localPort = 8804;        // local port to listen for OSC pack
 
 const int TRIG_PIN = 15;       // D8
 const int ECHO_PIN = 13;       // D7
+const int vib1 = 14;     // D5
+
+
+unsigned int vib1state = LOW;
 
 long duration;
 int distance;
@@ -51,12 +55,16 @@ void setup() {
   
   pinMode(TRIG_PIN, OUTPUT);
   pinMode(ECHO_PIN, INPUT);
+  pinMode(vib1, INPUT);
 }
 
 void loop() {
   OSCBundle bundle;
   
   // send data
+  vib1state = digitalRead(vib1);
+  Serial.println(vib1state);
+  
   digitalWrite(TRIG_PIN, LOW);
   delayMicroseconds(2);
   digitalWrite(TRIG_PIN, HIGH);
@@ -68,6 +76,7 @@ void loop() {
 
   bundle.empty();
   bundle.add("/04").add(distance);
+  bundle.add("/19").add(vib1state);
   Udp.beginPacket(host_ip, outPort);
   bundle.send(Udp);
   Udp.endPacket();
