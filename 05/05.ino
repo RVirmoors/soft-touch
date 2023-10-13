@@ -25,6 +25,11 @@ unsigned int relState = LOW;
 void setup() {
   Serial.begin(115200);
   delay(10);
+
+  IPAddress local_IP(192, 168, 50, 40);
+  IPAddress gateway(192, 168, 50, 155);
+  IPAddress subnet(255, 255, 255, 0);
+  WiFi.config(local_IP,gateway,subnet);
   
   Serial.println();
   Serial.print("Connecting to ");
