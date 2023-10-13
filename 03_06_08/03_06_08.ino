@@ -44,6 +44,11 @@ void setup() {
     while (1);
   }
   Serial.println("MPR121 found!");
+
+  IPAddress local_IP(192, 168, 50, 95);
+  IPAddress gateway(192, 168, 50, 155);
+  IPAddress subnet(255, 255, 255, 0);
+  WiFi.config(local_IP,gateway,subnet);
   
   Serial.println();
   Serial.print("Connecting to ");
