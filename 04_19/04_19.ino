@@ -16,9 +16,10 @@ const unsigned int localPort = 8804;        // local port to listen for OSC pack
 const int TRIG_PIN = 15;       // D8
 const int ECHO_PIN = 13;       // D7
 const int vib1 = 14;     // D5
-
+const int vib2 = 5;      // D1
 
 unsigned int vib1state = LOW;
+unsigned int vib2state = LOW;
 
 long duration;
 int distance;
@@ -56,6 +57,7 @@ void setup() {
   pinMode(TRIG_PIN, OUTPUT);
   pinMode(ECHO_PIN, INPUT);
   pinMode(vib1, INPUT);
+  pinMode(vib2, INPUT);
 }
 
 void loop() {
@@ -63,7 +65,9 @@ void loop() {
   
   // send data
   vib1state = digitalRead(vib1);
-  Serial.println(vib1state);
+  Serial.print(vib1state);
+  vib2state = digitalRead(vib2);
+  Serial.println(vib2state);
   
   digitalWrite(TRIG_PIN, LOW);
   delayMicroseconds(2);
@@ -76,7 +80,7 @@ void loop() {
 
   bundle.empty();
   bundle.add("/04").add(distance);
-  bundle.add("/19").add(vib1state);
+  bundle.add("/19").add(vib1state).add(vib2state);
   Udp.beginPacket(host_ip, outPort);
   bundle.send(Udp);
   Udp.endPacket();
