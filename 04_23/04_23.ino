@@ -1,4 +1,4 @@
-// OSC out: 04 - distanta WC, 19 - accel carpeta 2
+// OSC out: 04 - distanta WC, 23 - accel puf
 
 #include "WiFiConfig.h"
 #include <ESP8266WiFi.h>
@@ -84,9 +84,9 @@ void loop() {
 
   sensors_event_t event; 
   accel.getEvent(&event);
-  Serial.print(event.acceleration.x); Serial.print("  ");
-  Serial.print(event.acceleration.y); Serial.print("  ");
-  Serial.println(event.acceleration.z);
+//  Serial.print(event.acceleration.x); Serial.print("  ");
+//  Serial.print(event.acceleration.y); Serial.print("  ");
+  Serial.println(event.acceleration.x+event.acceleration.y+event.acceleration.z);
   
   digitalWrite(TRIG_PIN, LOW);
   delayMicroseconds(2);
@@ -99,8 +99,7 @@ void loop() {
 
   bundle.empty();
   bundle.add("/04").add(distance);
-//  bundle.add("/19").add(vib1state).add(vib2state);
-  bundle.add("/19").add(event.acceleration.x).add(event.acceleration.y).add(event.acceleration.z);
+  bundle.add("/23").add(event.acceleration.x).add(event.acceleration.y).add(event.acceleration.z);
   Udp.beginPacket(host_ip, outPort);
   bundle.send(Udp);
   Udp.endPacket();

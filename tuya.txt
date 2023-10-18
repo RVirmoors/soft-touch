@@ -1,0 +1,3 @@
+Access ID/Client ID: fh9gs4au9jt7dk3rv74k
+Access Secret/Client Secret: 9bd29aca03a34c6091b62abd89f80d93
+Project Code: p1697360583431ex787n
