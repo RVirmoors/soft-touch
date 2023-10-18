@@ -1,0 +1,153 @@
+{
+    "timestamp": 1697362302.4525216,
+    "devices": [
+        {
+            "id": "bf3ea1tvvqdhcgpe",
+            "name": "Smart curtain robot 2",
+            "key": "gz?blYno(R4s+F:6",
+            "mac": "DC:23:4D:65:DA:4D",
+            "uuid": "8a512938fb6ce715",
+            "sn": "10003934401177",
+            "category": "cl",
+            "product_name": "Smart curtain robot",
+            "product_id": "kcy0x4pi",
+            "biz_type": 0,
+            "model": "\u672c\u5730\u5b9a\u65f6",
+            "sub": false,
+            "icon": "https://images.tuyaeu.com/smart/icon/bay15953254745298oj3/cf5f88eed839c0136540b7482c2afae1.png",
+            "mapping": {
+                "1": {
+                    "code": "control",
+                    "type": "Enum",
+                    "values": {
+                        "range": [
+                            "open",
+                            "stop",
+                            "close",
+                            "continue"
+                        ]
+                    }
+                },
+                "2": {
+                    "code": "percent_control",
+                    "type": "Integer",
+                    "values": {
+                        "unit": "%",
+                        "min": 0,
+                        "max": 100,
+                        "scale": 0,
+                        "step": 50
+                    }
+                },
+                "3": {
+                    "code": "percent_state",
+                    "type": "Integer",
+                    "values": {
+                        "unit": "%",
+                        "min": 0,
+                        "max": 100,
+                        "scale": 0,
+                        "step": 1
+                    }
+                },
+                "12": {
+                    "code": "fault",
+                    "type": "Bitmap",
+                    "values": {
+                        "label": [
+                            "motor_fault"
+                        ]
+                    }
+                },
+                "13": {
+                    "code": "battery_percentage",
+                    "type": "Integer",
+                    "values": {
+                        "unit": "%",
+                        "min": 0,
+                        "max": 100,
+                        "scale": 0,
+                        "step": 1
+                    }
+                }
+            },
+            "ip": "",
+            "origin": "cloud",
+            "ver": ""
+        },
+        {
+            "id": "bf537aqqarrwx2rp",
+            "name": "Smart curtain robot",
+            "key": "#zr/7l]=YbF#d`c(",
+            "mac": "DC:23:4D:65:ED:54",
+            "uuid": "c983ef3329406d51",
+            "sn": "1000393440247E",
+            "category": "cl",
+            "product_name": "Smart curtain robot",
+            "product_id": "kcy0x4pi",
+            "biz_type": 0,
+            "model": "\u672c\u5730\u5b9a\u65f6",
+            "sub": false,
+            "icon": "https://images.tuyaeu.com/smart/icon/bay15953254745298oj3/cf5f88eed839c0136540b7482c2afae1.png",
+            "mapping": {
+                "1": {
+                    "code": "control",
+                    "type": "Enum",
+                    "values": {
+                        "range": [
+                            "open",
+                            "stop",
+                            "close",
+                            "continue"
+                        ]
+                    }
+                },
+                "2": {
+                    "code": "percent_control",
+                    "type": "Integer",
+                    "values": {
+                        "unit": "%",
+                        "min": 0,
+                        "max": 100,
+                        "scale": 0,
+                        "step": 50
+                    }
+                },
+                "3": {
+                    "code": "percent_state",
+                    "type": "Integer",
+                    "values": {
+                        "unit": "%",
+                        "min": 0,
+                        "max": 100,
+                        "scale": 0,
+                        "step": 1
+                    }
+                },
+                "12": {
+                    "code": "fault",
+                    "type": "Bitmap",
+                    "values": {
+                        "label": [
+                            "motor_fault"
+                        ]
+                    }
+                },
+                "13": {
+                    "code": "battery_percentage",
+                    "type": "Integer",
+                    "values": {
+                        "unit": "%",
+                        "min": 0,
+                        "max": 100,
+                        "scale": 0,
+                        "step": 1
+                    }
+                }
+            },
+            "ip": "",
+            "origin": "cloud",
+            "ver": ""
+        }
+    ]
+}

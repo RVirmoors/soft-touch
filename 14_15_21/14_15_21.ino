@@ -20,11 +20,11 @@ const unsigned int outPort = 9914;          // remote port to send OSC to Max
 const unsigned int localPort = 8814;        // local port to listen for OSC packets
 
 const int gandacPin = 13;  // D7
-const int borcan14pin = A0;
+const int gandacAnalogpin = A0;
 
 unsigned int gandacState = LOW;
-int borcan14 = 0;
 int gandacAnalog = 0;
+int borcanAnalog14 = 0;
 
 
 void setup() {
@@ -64,7 +64,7 @@ void loop() {
   OSCBundle bundle;
 
   // send data
-  borcan14 = analogRead(borcan14pin);
+  gandacAnalog = analogRead(gandacAnalogpin);
 
   gandacState = digitalRead(gandacPin);
 
@@ -72,14 +72,14 @@ void loop() {
   Wire.write(AIn0);
   Wire.endTransmission();
   Wire.requestFrom(PCF8591, 1);
-  gandacAnalog = Wire.read();
+  borcanAnalog14 = Wire.read();
 
   bundle.empty();
-  bundle.add("/14").add(borcan14);
+  bundle.add("/14").add(borcanAnalog14);
   bundle.add("/15").add(gandacState).add(gandacAnalog);
 
-  Serial.print(borcan14);Serial.print(" ");Serial.print(gandacState);Serial.print(" ");
-  Serial.println(gandacAnalog);
+  Serial.print(gandacAnalog);Serial.print(" ");Serial.print(gandacState);Serial.print(" ");
+  Serial.println(borcanAnalog14);
   
   Udp.beginPacket(host_ip, outPort);
   bundle.send(Udp);

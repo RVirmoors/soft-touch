@@ -1,0 +1,216 @@
+{
+    "result": [
+        {
+            "active_time": 1697359722,
+            "biz_type": 0,
+            "category": "cl",
+            "create_time": 1697359722,
+            "icon": "smart/icon/bay15953254745298oj3/cf5f88eed839c0136540b7482c2afae1.png",
+            "id": "bf3ea1tvvqdhcgpe",
+            "ip": "",
+            "lat": "44.4404",
+            "local_key": "gz?blYno(R4s+F:6",
+            "lon": "26.0710",
+            "model": "\u672c\u5730\u5b9a\u65f6",
+            "name": "Smart curtain robot 2",
+            "online": false,
+            "owner_id": "168951578",
+            "product_id": "kcy0x4pi",
+            "product_name": "Smart curtain robot",
+            "status": [
+                {
+                    "code": "control",
+                    "value": "stop"
+                },
+                {
+                    "code": "percent_control",
+                    "value": 0
+                },
+                {
+                    "code": "percent_state",
+                    "value": 6
+                },
+                {
+                    "code": "fault",
+                    "value": 0
+                },
+                {
+                    "code": "battery_percentage",
+                    "value": 100
+                }
+            ],
+            "sub": false,
+            "time_zone": "+03:00",
+            "uid": "eu1697358571690eZAHv",
+            "update_time": 1697359723,
+            "uuid": "8a512938fb6ce715",
+            "mapping": {
+                "1": {
+                    "code": "control",
+                    "type": "Enum",
+                    "values": {
+                        "range": [
+                            "open",
+                            "stop",
+                            "close",
+                            "continue"
+                        ]
+                    }
+                },
+                "2": {
+                    "code": "percent_control",
+                    "type": "Integer",
+                    "values": {
+                        "unit": "%",
+                        "min": 0,
+                        "max": 100,
+                        "scale": 0,
+                        "step": 50
+                    }
+                },
+                "3": {
+                    "code": "percent_state",
+                    "type": "Integer",
+                    "values": {
+                        "unit": "%",
+                        "min": 0,
+                        "max": 100,
+                        "scale": 0,
+                        "step": 1
+                    }
+                },
+                "12": {
+                    "code": "fault",
+                    "type": "Bitmap",
+                    "values": {
+                        "label": [
+                            "motor_fault"
+                        ]
+                    }
+                },
+                "13": {
+                    "code": "battery_percentage",
+                    "type": "Integer",
+                    "values": {
+                        "unit": "%",
+                        "min": 0,
+                        "max": 100,
+                        "scale": 0,
+                        "step": 1
+                    }
+                }
+            }
+        },
+        {
+            "active_time": 1697359718,
+            "biz_type": 0,
+            "category": "cl",
+            "create_time": 1697359718,
+            "icon": "smart/icon/bay15953254745298oj3/cf5f88eed839c0136540b7482c2afae1.png",
+            "id": "bf537aqqarrwx2rp",
+            "ip": "",
+            "lat": "44.4404",
+            "local_key": "#zr/7l]=YbF#d`c(",
+            "lon": "26.0710",
+            "model": "\u672c\u5730\u5b9a\u65f6",
+            "name": "Smart curtain robot",
+            "online": false,
+            "owner_id": "168951578",
+            "product_id": "kcy0x4pi",
+            "product_name": "Smart curtain robot",
+            "status": [
+                {
+                    "code": "control",
+                    "value": "stop"
+                },
+                {
+                    "code": "percent_control",
+                    "value": 0
+                },
+                {
+                    "code": "percent_state",
+                    "value": 100
+                },
+                {
+                    "code": "fault",
+                    "value": 0
+                },
+                {
+                    "code": "battery_percentage",
+                    "value": 100
+                }
+            ],
+            "sub": false,
+            "time_zone": "+03:00",
+            "uid": "eu1697358571690eZAHv",
+            "update_time": 1697359719,
+            "uuid": "c983ef3329406d51",
+            "mapping": {
+                "1": {
+                    "code": "control",
+                    "type": "Enum",
+                    "values": {
+                        "range": [
+                            "open",
+                            "stop",
+                            "close",
+                            "continue"
+                        ]
+                    }
+                },
+                "2": {
+                    "code": "percent_control",
+                    "type": "Integer",
+                    "values": {
+                        "unit": "%",
+                        "min": 0,
+                        "max": 100,
+                        "scale": 0,
+                        "step": 50
+                    }
+                },
+                "3": {
+                    "code": "percent_state",
+                    "type": "Integer",
+                    "values": {
+                        "unit": "%",
+                        "min": 0,
+                        "max": 100,
+                        "scale": 0,
+                        "step": 1
+                    }
+                },
+                "12": {
+                    "code": "fault",
+                    "type": "Bitmap",
+                    "values": {
+                        "label": [
+                            "motor_fault"
+                        ]
+                    }
+                },
+                "13": {
+                    "code": "battery_percentage",
+                    "type": "Integer",
+                    "values": {
+                        "unit": "%",
+                        "min": 0,
+                        "max": 100,
+                        "scale": 0,
+                        "step": 1
+                    }
+                }
+            }
+        }
+    ],
+    "success": true,
+    "t": 1697361257415,
+    "tid": "377f0e7b6b3b11ee951f3adf3fdcd1c8",
+    "file": {
+        "name": "tuya-raw.json",
+        "description": "Full raw list of Tuya devices.",
+        "account": "fh9gs4au9jt7dk3rv74k",
+        "date": "2023-10-15T12:14:18.044366",
+        "tinytuya": "1.12.11"
+    }
+}

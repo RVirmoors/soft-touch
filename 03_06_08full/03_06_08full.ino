@@ -1,4 +1,4 @@
-// OSC out: 03 - atingere bormasina MPR121, 06 - distanta microscop, 08 - fotorezistor carte
+// OSC out: 03 - atingere bormasina MPR121, 06 - distanta microscop, 08 - fotorezistor carte analog
 // OSC in: relee on/off ventilator, mixer, bormasina, TVs
 
 #include "WiFiConfig.h"
@@ -19,21 +19,18 @@ const unsigned int localPort = 8803;        // local port to listen for OSC pack
 Adafruit_MPR121 cap = Adafruit_MPR121(); // D1 & D2
 const int ventilatorPin = 0;  // D3
 const int mixerPin = 2;       // D4
-const int bormasinaPin = 14;   // D5
-const int tvPin = 1;        // TX
-const int cartePin = 12;  // D6
-const int TRIG_PIN = 15;       // D8
-const int ECHO_PIN = 13;       // D7
+const int tvPin = 13;       // D7
+const int bormasinaPin  = 15;  // D8
 
 long duration;
 int distance;
 
 float touch = 0.0;
-unsigned int venState = LOW;
-unsigned int mixState = LOW;
+unsigned int venState = HIGH;
+unsigned int mixState = HIGH;
 unsigned int borState = HIGH;
 unsigned int tvState = HIGH;
-unsigned int carte = LOW;
+int carte = 0;
 
 void setup() {
   Serial.begin(115200);
@@ -76,11 +73,12 @@ void setup() {
 
   delay(500);
 
-  pinMode(ventilatorPin, OUTPUT);pinMode(mixerPin, OUTPUT);pinMode(bormasinaPin, OUTPUT);pinMode(tvPin, OUTPUT);
-  digitalWrite(ventilatorPin, LOW);digitalWrite(mixerPin, LOW);digitalWrite(bormasinaPin, LOW);digitalWrite(tvPin, LOW);
-  pinMode(cartePin, INPUT);
-  pinMode(TRIG_PIN, OUTPUT);
-  pinMode(ECHO_PIN, INPUT);
+  pinMode(ventilatorPin, OUTPUT);pinMode(mixerPin, OUTPUT);
+  pinMode(bormasinaPin, OUTPUT);
+  pinMode(tvPin, OUTPUT);
+  digitalWrite(ventilatorPin, LOW);digitalWrite(mixerPin, LOW);
+  digitalWrite(bormasinaPin, HIGH);
+  digitalWrite(tvPin, LOW);
 }
 
 void relays(OSCMessage &msg) {
@@ -120,16 +118,8 @@ void loop() {
 //  Serial.print(cap.baselineData(0)); Serial.print("\t");
 //  Serial.println();
 
-  digitalWrite(TRIG_PIN, LOW);
-  delayMicroseconds(2);
-  digitalWrite(TRIG_PIN, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(TRIG_PIN, LOW);
-  duration = pulseIn(ECHO_PIN, HIGH);
-  distance = duration * 0.017;
-
   touch = cap.baselineData(0) - cap.filteredData(0);
-  carte = digitalRead(cartePin);
+  carte = analogRead(A0);
 
   Serial.print("Sending MPR: "); Serial.println(touch);
   Serial.print("Dist: "); Serial.println(distance);
@@ -137,7 +127,6 @@ void loop() {
 
   bundle.empty();
   bundle.add("/03").add(touch);
-  bundle.add("/06").add(distance);
   bundle.add("/08").add(carte);
   
   Udp.beginPacket(host_ip, outPort);
