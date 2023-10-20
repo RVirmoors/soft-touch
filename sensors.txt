@@ -1,5 +1,5 @@
-0A, lidar;
-0, hazna;
+0, lidar;
+0A, hazna;
 3, bormasina;
 4, wc;
 5, hazna;
@@ -9,8 +9,8 @@
 12, perie;
 14, borcan;
 15, gandaci;
-16, valiza;
-17, luna;
+16, luna;
+17, valiza;
 19, carpeta;
 20, magnet;
 21, nisip;
