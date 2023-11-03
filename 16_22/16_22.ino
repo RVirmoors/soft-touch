@@ -1,4 +1,5 @@
-// OSC out: 16 - fotorezistor valiza, 22 - vibratie lana
+// OSC in: on/off LED-uri valiza
+// OSC out: 16 - vibratie valiza, 22 - vibratie lana
 
 #include "WiFiConfig.h"
 #include <ESP8266WiFi.h>
@@ -24,11 +25,17 @@ Adafruit_NeoPixel WS2812B(NUM_PIXELS, 13, NEO_GRB + NEO_KHZ800);
 
 unsigned int vib1state = LOW;
 unsigned int valiza = LOW;
+unsigned int ledState = LOW;
 
 
 void setup() {
   Serial.begin(115200);
   delay(10);
+
+  IPAddress local_IP(192, 168, 50, 4);
+  IPAddress gateway(192, 168, 50, 155);
+  IPAddress subnet(255, 255, 255, 0);
+  WiFi.config(local_IP,gateway,subnet);
   
   Serial.println();
   Serial.print("Connecting to ");
@@ -63,30 +70,45 @@ void setup() {
   WS2812B.begin();  // INITIALIZE WS2812B strip object (REQUIRED)
 }
 
+void leduri(OSCMessage &msg) {
+  ledState = !msg.getInt(0);
+  Serial.print("leduri: "); Serial.println(ledState);
+  if (ledState) {
+    // 1 = valiza e inchisa
+    WS2812B.clear();
+    WS2812B.show();
+  } else {
+    for (int pixel = 0; pixel < NUM_PIXELS; pixel++) {           // for each pixel
+      WS2812B.setPixelColor(pixel, WS2812B.Color(6, 4, 1));  // it only takes effect if pixels.show() is called
+    }
+    WS2812B.show();   
+  }
+}
+
 void loop() {
   OSCBundle bundle;
+
+  // get data
+  int size = Udp.parsePacket();
+
+  if (size > 0) {
+    while (size--) {
+      bundle.fill(Udp.read());
+    }
+    if (!bundle.hasError()) {
+      bundle.dispatch("/16", leduri);
+    } else {
+      error = bundle.getError();
+      Serial.print("error: ");
+      Serial.println(error);
+    }
+  }  
   
   // send data
   vib1state = digitalRead(vib1);
   Serial.print("Vib lana: ");Serial.println(vib1state);
   valiza = digitalRead(valizaPin);
   Serial.print("Valiza: ");Serial.println(valiza);
-
-
-  if (valiza) {
-    // 1 = valiza e inchisa
-    WS2812B.clear();
-    WS2812B.show();
-    Serial.println(valiza);
-  } else {
-    for (int pixel = 0; pixel < NUM_PIXELS; pixel++) {           // for each pixel
-      WS2812B.setPixelColor(pixel, WS2812B.Color(80, 60, 10));  // it only takes effect if pixels.show() is called
-      WS2812B.show();                                           // send the updated pixel colors to the WS2812B hardware.
-    }
-    WS2812B.setBrightness(200);
-    WS2812B.show();   
-  }
-
 
   bundle.empty();
   bundle.add("/16").add(valiza);
