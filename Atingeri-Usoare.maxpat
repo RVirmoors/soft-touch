@@ -324,7 +324,7 @@
 					"patching_rect" : [ 1263.0, 114.0, 150.0, 89.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 4,
-					"presentation_rect" : [ 1130.0, 132.128659476117036, 173.0, 62.0 ],
+					"presentation_rect" : [ 1130.0, 126.128659476117036, 173.0, 62.0 ],
 					"text" : "NU MISCA FERESTRELE!!\n\n(nici asta - MAX - nici cea din dreapta cu ecranul telefonului)",
 					"textcolor" : [ 0.796078431372549, 0.035294117647059, 0.035294117647059, 1.0 ]
 				}
@@ -3031,7 +3031,6 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-324",
-					"int" : 1,
 					"maxclass" : "gswitch2",
 					"numinlets" : 2,
 					"numoutlets" : 2,
@@ -5256,6 +5255,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-138",
+									"int" : 1,
 									"maxclass" : "gswitch2",
 									"numinlets" : 2,
 									"numoutlets" : 2,
@@ -5268,6 +5268,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-139",
+									"int" : 1,
 									"maxclass" : "gswitch2",
 									"numinlets" : 2,
 									"numoutlets" : 2,
@@ -5280,6 +5281,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-140",
+									"int" : 1,
 									"maxclass" : "gswitch2",
 									"numinlets" : 2,
 									"numoutlets" : 2,
@@ -5768,7 +5770,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 1148.0, 66.0, 50.0, 22.0 ],
-													"text" : "5000"
+													"text" : "20000."
 												}
 
 											}
@@ -10622,7 +10624,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 1055.75, 122.0, 50.0, 22.0 ],
-													"text" : "5000"
+													"text" : "20000."
 												}
 
 											}
@@ -10639,7 +10641,7 @@
 													"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 													"parameter_enable" : 0,
 													"patching_rect" : [ 974.0, 256.359985000000052, 360.0, 155.0 ],
-													"setfilter" : [ 0, 1, 1, 0, 0, 5000.0, 1.0, 0.70710676908493, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+													"setfilter" : [ 0, 1, 1, 0, 0, 20000.0, 1.0, 0.70710676908493, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 												}
 
 											}
@@ -10840,7 +10842,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 574.75, 122.0, 50.0, 22.0 ],
-													"text" : "500"
+													"text" : "20000"
 												}
 
 											}
@@ -10857,7 +10859,7 @@
 													"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 													"parameter_enable" : 0,
 													"patching_rect" : [ 493.0, 256.359985000000052, 360.0, 155.0 ],
-													"setfilter" : [ 0, 1, 1, 0, 0, 500.0, 1.0, 0.70710676908493, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+													"setfilter" : [ 0, 1, 1, 0, 0, 20000.0, 1.0, 0.70710676908493, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 												}
 
 											}
@@ -11058,7 +11060,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 166.75, 126.0, 50.0, 22.0 ],
-													"text" : "500"
+													"text" : "20000"
 												}
 
 											}
@@ -11075,7 +11077,7 @@
 													"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 													"parameter_enable" : 0,
 													"patching_rect" : [ 85.0, 260.359985000000052, 360.0, 155.0 ],
-													"setfilter" : [ 0, 1, 1, 0, 0, 500.0, 1.0, 0.70710676908493, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+													"setfilter" : [ 0, 1, 1, 0, 0, 20000.0, 1.0, 0.70710676908493, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 												}
 
 											}
@@ -12027,6 +12029,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-125",
+									"int" : 1,
 									"maxclass" : "gswitch2",
 									"numinlets" : 2,
 									"numoutlets" : 2,
@@ -12039,6 +12042,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-126",
+									"int" : 1,
 									"maxclass" : "gswitch2",
 									"numinlets" : 2,
 									"numoutlets" : 2,
@@ -12051,6 +12055,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-127",
+									"int" : 1,
 									"maxclass" : "gswitch2",
 									"numinlets" : 2,
 									"numoutlets" : 2,
@@ -12652,7 +12657,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 166.75, 126.0, 50.0, 22.0 ],
-													"text" : "1000"
+													"text" : "20000"
 												}
 
 											}
@@ -12669,7 +12674,7 @@
 													"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 													"parameter_enable" : 0,
 													"patching_rect" : [ 85.0, 260.359985000000052, 360.0, 155.0 ],
-													"setfilter" : [ 0, 1, 1, 0, 0, 1000.0, 1.0, 0.70710676908493, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+													"setfilter" : [ 0, 1, 1, 0, 0, 20000.0, 1.0, 0.70710676908493, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 												}
 
 											}
@@ -13085,6 +13090,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-76",
+									"int" : 1,
 									"maxclass" : "gswitch2",
 									"numinlets" : 2,
 									"numoutlets" : 2,
@@ -13109,6 +13115,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-74",
+									"int" : 1,
 									"maxclass" : "gswitch2",
 									"numinlets" : 2,
 									"numoutlets" : 2,
@@ -13121,6 +13128,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-73",
+									"int" : 1,
 									"maxclass" : "gswitch2",
 									"numinlets" : 2,
 									"numoutlets" : 2,
@@ -14073,7 +14081,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 166.75, 126.0, 50.0, 22.0 ],
-													"text" : "1000"
+													"text" : "20000"
 												}
 
 											}
@@ -14090,7 +14098,7 @@
 													"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 													"parameter_enable" : 0,
 													"patching_rect" : [ 85.0, 260.359985000000052, 360.0, 155.0 ],
-													"setfilter" : [ 0, 1, 1, 0, 0, 1000.0, 1.0, 0.70710676908493, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+													"setfilter" : [ 0, 1, 1, 0, 0, 20000.0, 1.0, 0.70710676908493, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 												}
 
 											}
@@ -17933,6 +17941,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-312",
+					"int" : 1,
 					"maxclass" : "gswitch2",
 					"numinlets" : 2,
 					"numoutlets" : 2,
@@ -19373,7 +19382,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 2207.0, 1075.999999999999773, 50.0, 36.0 ],
-					"text" : "/video 0"
+					"text" : "/video 14"
 				}
 
 			}
@@ -19433,7 +19442,7 @@
 					"patching_rect" : [ 826.5, 588.56132511556234, 115.0, 34.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 535.499983999999813, 742.328665722683809, 115.0, 34.0 ],
-					"text" : "hazna"
+					"text" : "borcan"
 				}
 
 			}
@@ -22122,7 +22131,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 157.0, 818.836671802773481, 50.0, 22.0 ],
-					"text" : "-6."
+					"text" : "-70."
 				}
 
 			}
@@ -22166,7 +22175,7 @@
 					"patching_rect" : [ 596.333327999999938, 1065.0, 461.333344000000011, 43.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 211.952355285714816, 871.0, 594.333343999999897, 43.0 ],
-					"text" : "loop initial"
+					"text" : "\"14 Taur - VOCE.wav\""
 				}
 
 			}
@@ -22214,13 +22223,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-107",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1866.0, 707.700000000000045, 83.0, 36.0 ],
-					"text" : "gol gol \"fara voce\""
+					"patching_rect" : [ 1866.0, 707.700000000000045, 83.0, 50.0 ],
+					"text" : "preload 14 \"14 Taur - VOCE.wav\""
 				}
 
 			}
@@ -22347,7 +22356,7 @@
 					"patching_rect" : [ 596.333327999999938, 988.0, 461.333344000000011, 43.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 211.952355285714816, 792.128659476117036, 594.333343999999897, 43.0 ],
-					"text" : "loop initial"
+					"text" : "\"14 Taur - SUNET.wav\""
 				}
 
 			}
@@ -22981,13 +22990,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-27",
-					"linecount" : 4,
+					"linecount" : 3,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1375.0, 707.700000000000045, 83.0, 64.0 ],
-					"text" : "preload 11 \"11 Vita de vie - SUNET.wav\""
+					"patching_rect" : [ 1375.0, 707.700000000000045, 83.0, 50.0 ],
+					"text" : "preload 14 \"14 Taur - SUNET.wav\""
 				}
 
 			}
@@ -23407,7 +23416,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 44.0, 849.336671802773481, 77.0, 77.0 ],
-					"text" : "preload 2 \"00 Loop and Intro.wav\" 0 48000"
+					"text" : "preload 3 \"00 Loop and Intro.wav\" 48000"
 				}
 
 			}
