@@ -5770,7 +5770,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 1148.0, 66.0, 50.0, 22.0 ],
-													"text" : "20000."
+													"text" : "5000"
 												}
 
 											}
@@ -10624,7 +10624,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 1055.75, 122.0, 50.0, 22.0 ],
-													"text" : "20000."
+													"text" : "5000"
 												}
 
 											}
@@ -10641,7 +10641,7 @@
 													"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 													"parameter_enable" : 0,
 													"patching_rect" : [ 974.0, 256.359985000000052, 360.0, 155.0 ],
-													"setfilter" : [ 0, 1, 1, 0, 0, 20000.0, 1.0, 0.70710676908493, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+													"setfilter" : [ 0, 1, 1, 0, 0, 5000.0, 1.0, 0.70710676908493, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 												}
 
 											}
@@ -10842,7 +10842,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 574.75, 122.0, 50.0, 22.0 ],
-													"text" : "20000"
+													"text" : "500"
 												}
 
 											}
@@ -10859,7 +10859,7 @@
 													"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 													"parameter_enable" : 0,
 													"patching_rect" : [ 493.0, 256.359985000000052, 360.0, 155.0 ],
-													"setfilter" : [ 0, 1, 1, 0, 0, 20000.0, 1.0, 0.70710676908493, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+													"setfilter" : [ 0, 1, 1, 0, 0, 500.0, 1.0, 0.70710676908493, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 												}
 
 											}
@@ -11060,7 +11060,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 166.75, 126.0, 50.0, 22.0 ],
-													"text" : "20000"
+													"text" : "500"
 												}
 
 											}
@@ -11077,7 +11077,7 @@
 													"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 													"parameter_enable" : 0,
 													"patching_rect" : [ 85.0, 260.359985000000052, 360.0, 155.0 ],
-													"setfilter" : [ 0, 1, 1, 0, 0, 20000.0, 1.0, 0.70710676908493, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+													"setfilter" : [ 0, 1, 1, 0, 0, 500.0, 1.0, 0.70710676908493, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 												}
 
 											}
@@ -12657,7 +12657,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 166.75, 126.0, 50.0, 22.0 ],
-													"text" : "20000"
+													"text" : "1000"
 												}
 
 											}
@@ -12674,7 +12674,7 @@
 													"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 													"parameter_enable" : 0,
 													"patching_rect" : [ 85.0, 260.359985000000052, 360.0, 155.0 ],
-													"setfilter" : [ 0, 1, 1, 0, 0, 20000.0, 1.0, 0.70710676908493, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+													"setfilter" : [ 0, 1, 1, 0, 0, 1000.0, 1.0, 0.70710676908493, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 												}
 
 											}
@@ -14081,7 +14081,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 166.75, 126.0, 50.0, 22.0 ],
-													"text" : "20000"
+													"text" : "1000"
 												}
 
 											}
@@ -14098,7 +14098,7 @@
 													"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 													"parameter_enable" : 0,
 													"patching_rect" : [ 85.0, 260.359985000000052, 360.0, 155.0 ],
-													"setfilter" : [ 0, 1, 1, 0, 0, 20000.0, 1.0, 0.70710676908493, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+													"setfilter" : [ 0, 1, 1, 0, 0, 1000.0, 1.0, 0.70710676908493, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 												}
 
 											}
@@ -17941,7 +17941,6 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-312",
-					"int" : 1,
 					"maxclass" : "gswitch2",
 					"numinlets" : 2,
 					"numoutlets" : 2,
@@ -19382,7 +19381,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 2207.0, 1075.999999999999773, 50.0, 36.0 ],
-					"text" : "/video 14"
+					"text" : "/video 0"
 				}
 
 			}
@@ -19442,7 +19441,7 @@
 					"patching_rect" : [ 826.5, 588.56132511556234, 115.0, 34.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 535.499983999999813, 742.328665722683809, 115.0, 34.0 ],
-					"text" : "borcan"
+					"text" : "hazna"
 				}
 
 			}
@@ -22131,7 +22130,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 157.0, 818.836671802773481, 50.0, 22.0 ],
-					"text" : "-70."
+					"text" : "-6."
 				}
 
 			}
@@ -22175,7 +22174,7 @@
 					"patching_rect" : [ 596.333327999999938, 1065.0, 461.333344000000011, 43.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 211.952355285714816, 871.0, 594.333343999999897, 43.0 ],
-					"text" : "\"14 Taur - VOCE.wav\""
+					"text" : "loop initial"
 				}
 
 			}
@@ -22223,13 +22222,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-107",
-					"linecount" : 3,
+					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1866.0, 707.700000000000045, 83.0, 50.0 ],
-					"text" : "preload 14 \"14 Taur - VOCE.wav\""
+					"patching_rect" : [ 1866.0, 707.700000000000045, 83.0, 36.0 ],
+					"text" : "gol gol \"fara voce\""
 				}
 
 			}
@@ -22356,7 +22355,7 @@
 					"patching_rect" : [ 596.333327999999938, 988.0, 461.333344000000011, 43.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 211.952355285714816, 792.128659476117036, 594.333343999999897, 43.0 ],
-					"text" : "\"14 Taur - SUNET.wav\""
+					"text" : "loop initial"
 				}
 
 			}
@@ -22990,13 +22989,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-27",
-					"linecount" : 3,
+					"linecount" : 4,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1375.0, 707.700000000000045, 83.0, 50.0 ],
-					"text" : "preload 14 \"14 Taur - SUNET.wav\""
+					"patching_rect" : [ 1375.0, 707.700000000000045, 83.0, 64.0 ],
+					"text" : "preload 11 \"11 Vita de vie - SUNET.wav\""
 				}
 
 			}
@@ -23416,7 +23415,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 44.0, 849.336671802773481, 77.0, 77.0 ],
-					"text" : "preload 3 \"00 Loop and Intro.wav\" 48000"
+					"text" : "preload 2 \"00 Loop and Intro.wav\" 0 48000"
 				}
 
 			}
