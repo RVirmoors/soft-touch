@@ -40,6 +40,18 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-43",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 2617.5, 9.432665639445332, 70.0, 22.0 ],
+					"text" : "loadmess 0"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-46",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -70,7 +82,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 2283.0, 384.0, 50.0, 22.0 ],
-					"text" : "0"
+					"text" : "1"
 				}
 
 			}
@@ -844,7 +856,7 @@
 					"outlettype" : [ "", "bang" ],
 					"patching_rect" : [ 2217.0, 145.995210267202793, 151.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 2217.0, 145.995210267202793, 151.0, 22.0 ],
+					"presentation_rect" : [ 414.0, 185.654615240581848, 151.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0
 					}
@@ -1926,18 +1938,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1005.0, 713.336671802773481, 105.0, 22.0 ],
 					"text" : "if $i1 == 40 then 0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-487",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 699.0, 174.0, 32.0, 22.0 ],
-					"text" : "gate"
 				}
 
 			}
@@ -3821,7 +3821,6 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-324",
-					"int" : 1,
 					"maxclass" : "gswitch2",
 					"numinlets" : 2,
 					"numoutlets" : 2,
@@ -5564,7 +5563,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 77.0, 1346.0, 137.0, 35.0 ],
-									"text" : "aed 1 -169.618373 1. 1. 1"
+									"text" : "aed 1 -53.758838 1. 1. 1"
 								}
 
 							}
@@ -5601,7 +5600,7 @@
 									"patching_rect" : [ 190.5, 1089.972076000000015, 241.0, 241.0 ],
 									"prototypename" : "small_light_grey",
 									"save_points" : 1,
-									"saved_points" : [ "1", 1, -0.180176288844421, -0.983479495692615, 0.017452406437283, -169.618373000631664, 1.0, 1.0, 0, 0.0, 0.0, 0.0, 0, 0, "2", 2, 0.000000000000044, 0.999950291342572, 0.009970699268659, -360.0, 0.571288452913691, 1.0, 0, 0.0, 0.0, 0.0, 0, 0, "3", 3, -0.70705981699797, 0.707059816997989, 0.011525206009785, -45.0, 0.660360282246883, 1.0, 0, 0.0, 0.0, 0.0, 0, 0, "4", 4, -0.000000000000026, -1.0, 0.0, -180.0, 0.0, 1.0, 0, 0.0, 0.0, 0.0, 0, 1, "5", 5, 0.382683432365128, 0.923879532511271, 0.0, -337.5, 0.0, 1.0, 0, 0.0, 0.0, 0.0, 0, 0, "6", 6, 0.707106781186575, 0.70710678118652, 0.0, -315.0, 0.0, 1.0, 0, 0.0, 0.0, 0.0, 0, 0 ],
+									"saved_points" : [ "1", 1, -0.806412966481312, 0.591095204683947, 0.017452406437283, -53.758838029502471, 1.0, 1.0, 0, 0.0, 0.0, 0.0, 0, 0, "2", 2, 0.000000000000044, 0.999950291342572, 0.009970699268659, -360.0, 0.571288452913691, 1.0, 0, 0.0, 0.0, 0.0, 0, 0, "3", 3, -0.70705981699797, 0.707059816997989, 0.011525206009785, -45.0, 0.660360282246883, 1.0, 0, 0.0, 0.0, 0.0, 0, 0, "4", 4, -0.000000000000026, -1.0, 0.0, -180.0, 0.0, 1.0, 0, 0.0, 0.0, 0.0, 0, 1, "5", 5, 0.382683432365128, 0.923879532511271, 0.0, -337.5, 0.0, 1.0, 0, 0.0, 0.0, 0.0, 0, 0, "6", 6, 0.707106781186575, 0.70710678118652, 0.0, -315.0, 0.0, 1.0, 0, 0.0, 0.0, 0.0, 0, 0 ],
 									"zoom_focal_point" : [ -0.01276731567188, 0.021278859453133, 0.0 ],
 									"zoom_scale" : 0.771920554030977
 								}
@@ -6156,6 +6155,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-138",
+									"int" : 1,
 									"maxclass" : "gswitch2",
 									"numinlets" : 2,
 									"numoutlets" : 2,
@@ -6168,6 +6168,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-139",
+									"int" : 1,
 									"maxclass" : "gswitch2",
 									"numinlets" : 2,
 									"numoutlets" : 2,
@@ -6180,6 +6181,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-140",
+									"int" : 1,
 									"maxclass" : "gswitch2",
 									"numinlets" : 2,
 									"numoutlets" : 2,
@@ -12927,6 +12929,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-125",
+									"int" : 1,
 									"maxclass" : "gswitch2",
 									"numinlets" : 2,
 									"numoutlets" : 2,
@@ -12939,6 +12942,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-126",
+									"int" : 1,
 									"maxclass" : "gswitch2",
 									"numinlets" : 2,
 									"numoutlets" : 2,
@@ -12951,6 +12955,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-127",
+									"int" : 1,
 									"maxclass" : "gswitch2",
 									"numinlets" : 2,
 									"numoutlets" : 2,
@@ -13985,6 +13990,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-76",
+									"int" : 1,
 									"maxclass" : "gswitch2",
 									"numinlets" : 2,
 									"numoutlets" : 2,
@@ -14009,6 +14015,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-74",
+									"int" : 1,
 									"maxclass" : "gswitch2",
 									"numinlets" : 2,
 									"numoutlets" : 2,
@@ -14021,6 +14028,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-73",
+									"int" : 1,
 									"maxclass" : "gswitch2",
 									"numinlets" : 2,
 									"numoutlets" : 2,
@@ -18811,6 +18819,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-312",
+					"int" : 1,
 					"maxclass" : "gswitch2",
 					"numinlets" : 2,
 					"numoutlets" : 2,
@@ -20251,7 +20260,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 2207.0, 1075.999999999999773, 50.0, 36.0 ],
-					"text" : "/video 5"
+					"text" : "/video 17"
 				}
 
 			}
@@ -20311,7 +20320,7 @@
 					"patching_rect" : [ 826.5, 588.56132511556234, 115.0, 34.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 535.499983999999813, 742.328665722683809, 115.0, 34.0 ],
-					"text" : "carte"
+					"text" : "valiza"
 				}
 
 			}
@@ -22953,7 +22962,7 @@
 					"patching_rect" : [ 596.333327999999938, 1065.0, 461.333344000000011, 43.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 211.952355285714816, 871.0, 594.333343999999897, 43.0 ],
-					"text" : "08H.wav"
+					"text" : "\"17 Valiza - VOCE.wav\""
 				}
 
 			}
@@ -23001,13 +23010,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-107",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1866.0, 707.700000000000045, 83.0, 36.0 ],
-					"text" : "preload 29 08H.wav"
+					"patching_rect" : [ 1866.0, 707.700000000000045, 83.0, 50.0 ],
+					"text" : "preload 17 \"17 Valiza - VOCE.wav\""
 				}
 
 			}
@@ -23122,7 +23131,7 @@
 					"patching_rect" : [ 596.333327999999938, 988.0, 461.333344000000011, 43.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 211.952355285714816, 792.128659476117036, 594.333343999999897, 43.0 ],
-					"text" : "\"06 Microscopul - SUNET.wav\""
+					"text" : "\"17 Valiza - SUNET.wav\""
 				}
 
 			}
@@ -23762,7 +23771,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1375.0, 707.700000000000045, 83.0, 50.0 ],
-					"text" : "preload 6 \"06 Microscopul - SUNET.wav\""
+					"text" : "preload 17 \"17 Valiza - SUNET.wav\""
 				}
 
 			}
@@ -24147,7 +24156,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 44.0, 849.336671802773481, 77.0, 77.0 ],
-					"text" : "preload 2 \"00 Loop and Intro.wav\" 0 48000"
+					"text" : "preload 3 \"00 Loop and Intro.wav\" 48000"
 				}
 
 			}
@@ -28176,6 +28185,22 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-525", 0 ],
+					"order" : 1,
+					"source" : [ "obj-43", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-600", 0 ],
+					"order" : 0,
+					"source" : [ "obj-43", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-269", 0 ],
 					"source" : [ "obj-430", 0 ]
 				}
@@ -30059,6 +30084,20 @@
 			}
 , 			{
 				"name" : "sensors.txt",
+				"bootpath" : "~/Documents/GitHub/soft-touch",
+				"patcherrelativepath" : ".",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "sfplay-convert-to-groove-SUNET.txt",
+				"bootpath" : "~/Documents/GitHub/soft-touch",
+				"patcherrelativepath" : ".",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "sfplay-convert-to-groove-VOCE.txt",
 				"bootpath" : "~/Documents/GitHub/soft-touch",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
