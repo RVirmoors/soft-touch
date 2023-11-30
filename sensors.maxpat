@@ -399,7 +399,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 509.950000703334808, 430.000006377696991, 50.0, 50.0 ],
-					"text" : "-625 656 451"
+					"text" : "-544 735 431"
 				}
 
 			}
@@ -450,7 +450,7 @@
 					"patching_rect" : [ 2.0, 191.460051387548447, 50.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 121.505884349346161, 27.258821964263916, 38.0, 22.0 ],
-					"text" : "78"
+					"text" : "110"
 				}
 
 			}
@@ -488,7 +488,7 @@
 					"patching_rect" : [ 15.0, 91.800001680850983, 50.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 121.505884349346161, 5.258821964263916, 38.0, 22.0 ],
-					"text" : "70."
+					"text" : "-4."
 				}
 
 			}
@@ -584,7 +584,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1136.0, 688.0, 50.0, 22.0 ],
-					"text" : "3"
+					"text" : "0"
 				}
 
 			}
@@ -3551,17 +3551,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "OSC-route.mxe64",
-				"type" : "mx64"
-			}
-, 			{
-				"name" : "pipo.mxe64",
-				"type" : "mx64"
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }
